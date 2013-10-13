@@ -69,5 +69,32 @@ describe('validateable#StringProperty', function(){
       assert.equal(string.validate(), false);
     })
   });
+
+  describe("hasLength", function(){
+    it("should validate => min: 2 for hello", function(){
+      var string = new validateable.StringProperty;
+      string.hasLength({min: 2});
+      string.set("hello");
+      assert.equal(string.validate(), true);
+    })
+    it("should validate => max: 10 for hello", function(){
+      var string = new validateable.StringProperty;
+      string.hasLength({max: 10});
+      string.set("hello");
+      assert.equal(string.validate(), true);
+    })
+    it("should validate => min: 2, max: 10 for hello", function(){
+      var string = new validateable.StringProperty;
+      string.hasLength({min: 2, max: 10});
+      string.set("hello");
+      assert.equal(string.validate(), true);
+    })
+    it("should not validate => min: 100", function(){
+      var string = new validateable.StringProperty;
+      string.hasLength({min: 100});
+      string.set("hello");
+      assert.equal(string.validate(), false);
+    })
+  });
 })
 
