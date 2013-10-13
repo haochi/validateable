@@ -1,0 +1,20 @@
+{
+  "name": "validateable",
+  "version": "0.0.0",
+  "description": "Primitive types with validation support.",
+  "main": "./lib/validateable.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/haochi/validateable.git"
+  },
+  "keywords": [
+    "primitive",
+    "validation",
+    "validate"
+  ],
+  "author": "Haochi Chen",
+  "readmeFilename": "README.md"
+}
