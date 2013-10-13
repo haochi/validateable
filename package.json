@@ -1,10 +1,10 @@
 {
   "name": "validateable",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Primitive types with validation support.",
   "main": "./lib/validateable.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
     "validate"
   ],
   "author": "Haochi Chen",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "mocha": "*"
+  }
 }
