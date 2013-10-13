@@ -55,5 +55,19 @@ describe('validateable#StringProperty', function(){
       assert.equal(string.validate(), false);
     })
   });
+
+  describe("notEmpty", function(){
+    it("should validate", function(){
+      var string = new validateable.StringProperty;
+      string.notEmpty();
+      string.set("hello");
+      assert.equal(string.validate(), true);
+    })
+    it("should not validate", function(){
+      var string = new validateable.StringProperty;
+      string.notEmpty();
+      assert.equal(string.validate(), false);
+    })
+  });
 })
 
